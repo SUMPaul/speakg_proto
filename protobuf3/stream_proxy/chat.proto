@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package stream_proxy;
+option go_package = "github.com/SUMPaul/speakg_proto/protobuf3.pb/stream_gateway";
+
+
+service StreamProxyService {
+  // Add more RPC methods as needed
+  rpc ProxyChatGPTStream(stream ProxyChatGPTStreamReq) returns (stream ProxyChatGPTStreamResp);
+  // rpc ReceiveMessage (stream Message) returns (stream Event);
+}
+
+message ProxyChatGPTStreamReq {
+  string id = 1;
+  string content = 2;
+  // Add more fields as needed
+}
+
+message ProxyChatGPTStreamResp {
+  string id = 1;
+  string content = 2;
+  string url = 3;
+  // Add more fields as needed
+}
+
+//message Message {
+//  string sender = 1;
+//  string body = 2;
+//}
+//
+//message Event {
+//  string message = 1;
+//}
