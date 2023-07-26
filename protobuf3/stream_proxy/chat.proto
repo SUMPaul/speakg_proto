@@ -19,7 +19,8 @@ message ProxyChatGPTStreamReq {
 message ProxyChatGPTStreamResp {
   string id = 1;
   string content = 2;
-  string url = 3;
+  string audioContent = 3;
+  string url = 4;
   // Add more fields as needed
 }
 
