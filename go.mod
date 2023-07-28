@@ -5,6 +5,7 @@ go 1.18
 require (
 	github.com/golang/protobuf v1.5.3
 	github.com/micro/go-micro v1.18.0
+	google.golang.org/grpc v1.25.1
 )
 
 require (
@@ -18,5 +19,6 @@ require (
 	golang.org/x/net v0.0.0-20191109021931-daa7c04131f5 // indirect
 	golang.org/x/sys v0.0.0-20191110163157-d32e6e3b99c4 // indirect
 	golang.org/x/text v0.3.2 // indirect
-	google.golang.org/protobuf v1.26.0 // indirect
+	google.golang.org/genproto v0.0.0-20191108220845-16a3f7862a1a // indirect
+	google.golang.org/protobuf v1.31.0 // indirect
 )
