@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package stream_proxy;
+package speakg.stream_proxy;
 option go_package = "github.com/SUMPaul/speakg_proto/protobuf3.pb/stream_gateway";
 
 
