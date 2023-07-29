@@ -3,22 +3,21 @@ module github.com/SUMPaul/speakg_proto
 go 1.20
 
 require (
-	github.com/golang/protobuf v1.5.3
-	github.com/micro/micro/v3 v3.19.1-0.20230709181230-4ec5acb2c369
+	github.com/asim/go-micro/v3 v3.6.0
+	google.golang.org/protobuf v1.28.1
 )
 
 require (
-	github.com/asim/go-micro/cmd/protoc-gen-micro/v3 v3.7.0 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/evanphx/json-patch/v5 v5.5.0 // indirect
+	github.com/golang/protobuf v1.5.3 // indirect
+	github.com/google/go-cmp v0.5.9 // indirect
 	github.com/google/uuid v1.3.0 // indirect
+	github.com/miekg/dns v1.1.43 // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
+	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
 	golang.org/x/net v0.10.0 // indirect
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
+	golang.org/x/sys v0.8.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
-	google.golang.org/genproto v0.0.0-20230306155012-7f2fa6fef1f4 // indirect
-	google.golang.org/protobuf v1.28.1 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
