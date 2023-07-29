@@ -11,8 +11,9 @@ import (
 
 import (
 	context "context"
-	client "github.com/micro/go-micro/client"
-	server "github.com/micro/go-micro/server"
+	api "github.com/micro/micro/v3/service/api"
+	client "github.com/micro/micro/v3/service/client"
+	server "github.com/micro/micro/v3/service/server"
 )
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -27,9 +28,16 @@ var _ = math.Inf
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
 // Reference imports to suppress errors if they are not otherwise used.
+var _ api.Endpoint
 var _ context.Context
 var _ client.Option
 var _ server.Option
+
+// Api Endpoints for StreamProxyService service
+
+func NewStreamProxyServiceEndpoints() []*api.Endpoint {
+	return []*api.Endpoint{}
+}
 
 // Client API for StreamProxyService service
 
@@ -44,12 +52,6 @@ type streamProxyService struct {
 }
 
 func NewStreamProxyService(name string, c client.Client) StreamProxyService {
-	if c == nil {
-		c = client.NewClient()
-	}
-	if len(name) == 0 {
-		name = "stream_proxy"
-	}
 	return &streamProxyService{
 		c:    c,
 		name: name,
@@ -66,6 +68,7 @@ func (c *streamProxyService) ProxyChatGPTStream(ctx context.Context, opts ...cli
 }
 
 type StreamProxyService_ProxyChatGPTStreamService interface {
+	Context() context.Context
 	SendMsg(interface{}) error
 	RecvMsg(interface{}) error
 	Close() error
@@ -79,6 +82,10 @@ type streamProxyServiceProxyChatGPTStream struct {
 
 func (x *streamProxyServiceProxyChatGPTStream) Close() error {
 	return x.stream.Close()
+}
+
+func (x *streamProxyServiceProxyChatGPTStream) Context() context.Context {
+	return x.stream.Context()
 }
 
 func (x *streamProxyServiceProxyChatGPTStream) SendMsg(m interface{}) error {
@@ -129,6 +136,7 @@ func (h *streamProxyServiceHandler) ProxyChatGPTStream(ctx context.Context, stre
 }
 
 type StreamProxyService_ProxyChatGPTStreamStream interface {
+	Context() context.Context
 	SendMsg(interface{}) error
 	RecvMsg(interface{}) error
 	Close() error
@@ -142,6 +150,10 @@ type streamProxyServiceProxyChatGPTStreamStream struct {
 
 func (x *streamProxyServiceProxyChatGPTStreamStream) Close() error {
 	return x.stream.Close()
+}
+
+func (x *streamProxyServiceProxyChatGPTStreamStream) Context() context.Context {
+	return x.stream.Context()
 }
 
 func (x *streamProxyServiceProxyChatGPTStreamStream) SendMsg(m interface{}) error {
