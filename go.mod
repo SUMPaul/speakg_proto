@@ -8,6 +8,7 @@ require (
 )
 
 require (
+	github.com/asim/go-micro/cmd/protoc-gen-micro/v3 v3.7.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/evanphx/json-patch/v5 v5.5.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
@@ -17,6 +18,7 @@ require (
 	github.com/stretchr/testify v1.8.1 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/text v0.9.0 // indirect
+	google.golang.org/genproto v0.0.0-20230306155012-7f2fa6fef1f4 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
