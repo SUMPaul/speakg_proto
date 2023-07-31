@@ -19,6 +19,9 @@ message ProxyChatGPTStreamResp {
   string content = 2;
   string audioContent = 3;
   string url = 4;
+  string full_content = 5;
+  string full_audioContent = 6;
+  string full_url = 7;
   // Add more fields as needed
 }
 
