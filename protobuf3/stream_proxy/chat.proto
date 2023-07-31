@@ -12,7 +12,6 @@ service StreamProxyService {
 
 message ProxyChatGPTStreamReq {
   string content = 1;
-  int32 max_token = 2;
 }
 
 message ProxyChatGPTStreamResp {
