@@ -11,23 +11,8 @@ service StreamProxyService {
 }
 
 message ProxyChatGPTStreamReq {
-  int64 chat_type = 1;
-  string conversation_id = 2;
-  string message_id = 3;
-  string uid = 4;
-  string openid = 5;
-  string seq = 6;
-  int64 from = 7;
-  int64 fail = 8;
-  int64 round = 9;
-  int64 round_seq = 10;
-  string voice_url = 11;
-  string content = 12;
-  int64 duration = 13;
-  string topic_name = 14;
-  int64 pronunciation_status = 15;
-  bool  proxy = 16;
-  // Add more fields as needed
+  string content = 1;
+  int32 max_token = 2;
 }
 
 message ProxyChatGPTStreamResp {
