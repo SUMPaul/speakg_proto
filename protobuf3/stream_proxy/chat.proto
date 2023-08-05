@@ -11,7 +11,7 @@ service StreamProxyService {
 }
 
 message LearnConfig {
-  int64 voice_speed = 1;
+  float voice_speed = 1;
   string google_name = 2;
   float pitch = 3;
   string language = 4;
