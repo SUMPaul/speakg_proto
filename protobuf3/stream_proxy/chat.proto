@@ -10,8 +10,17 @@ service StreamProxyService {
   // rpc ReceiveMessage (stream Message) returns (stream Event);
 }
 
+message LearnConfig {
+  int64 voice_speed = 1;
+  string google_name = 2;
+  float pitch = 3;
+  string language = 4;
+  string gender = 5;
+}
+
 message ProxyChatGPTStreamReq {
   string content = 1;
+  LearnConfig learn_config = 2;
 }
 
 message ProxyChatGPTStreamResp {
